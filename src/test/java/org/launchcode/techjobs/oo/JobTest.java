@@ -67,9 +67,9 @@ public class JobTest {
     public void testToStringContainsCorrectLabelsAndData() {
     Job job7 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
-    String testString = System.lineSeparator() + "ID: " + job7.getId() + System.lineSeparator() + "Name: " + "Product tester" + System.lineSeparator() +
-            "Employer: " + "ACME" + System.lineSeparator() + "Location: " + "Desert" + System.lineSeparator() +
-            "Position Type: " + "Quality control" + System.lineSeparator() + "Core Competency: " + "Persistence" + System.lineSeparator();
+    String testString =  "\nID: " + job7.getId() + "\n" + "Name: " + "Product tester" + "\n" +
+            "Employer: " + "ACME" + "\n" + "Location: " + "Desert" + "\n" +
+            "Position Type: " + "Quality control" + "\n" + "Core Competency: " + "Persistence" + "\n";
 
     assertEquals(testString, job7.toString());
     }
