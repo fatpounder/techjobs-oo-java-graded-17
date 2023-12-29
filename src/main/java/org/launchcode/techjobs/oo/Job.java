@@ -3,6 +3,8 @@ package org.launchcode.techjobs.oo;
 import javax.swing.plaf.synth.SynthLookAndFeel;
 import java.util.Objects;
 
+import static java.lang.System.lineSeparator;
+
 public class Job {
 
     private int id;
@@ -72,12 +74,12 @@ public class Job {
         if (positionType.getValue() == null || positionType.getValue().isEmpty()) {
             positionType.setValue("Data not available");
         }
-        if (coreCompetency.getValue() == null || positionType.getValue().isEmpty()) {
+        if (coreCompetency.getValue() == null || coreCompetency.getValue().isEmpty()) {
             coreCompetency.setValue("Data not available");
         }
-        return System.lineSeparator() + "ID: " + id + System.lineSeparator() + "Name: " + name + System.lineSeparator() +
-                "Employer: " + employer + System.lineSeparator() + "Location: " + location + System.lineSeparator() +
-                "Position Type: " + positionType + System.lineSeparator() + "Core Competency: " + coreCompetency + System.lineSeparator();
+        return "\nID: " + id + lineSeparator() + "Name: " + name + lineSeparator() +
+                "Employer: " + employer + lineSeparator() + "Location: " + location + lineSeparator() +
+                "Position Type: " + positionType + lineSeparator() + "Core Competency: " + coreCompetency + lineSeparator();
     }
 
 

@@ -58,8 +58,8 @@ public class JobTest {
     Job job6 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
     String startsWith = String.valueOf(job6.toString().charAt(0));
     String endsWith = String.valueOf(job6.toString().charAt(job6.toString().length()-1));
-    assertEquals(startsWith, lineSeparator());
-    assertEquals(endsWith, lineSeparator());
+    assertEquals(startsWith, "\n");
+    assertEquals(endsWith, "\n");
     }
 
     //TODO: The string should contain a label for each field, followed by the data stored in that field. Each field should be on its own line
