@@ -49,7 +49,7 @@ public class JobTest {
     assertFalse(job4.equals(job5));
     }
 
-    //TODO: When passed a Job object, it should return a string that contains a blank line before and after the job information
+    //When passed a Job object, it should return a string that contains a blank line before and after the job information
     //use assertEquals to verify that these characters are correct
     //will need to use lineSeparator()
     //use index 0 and the length -1 for last index
@@ -62,7 +62,8 @@ public class JobTest {
     assertEquals(endsWith, "\n");
     }
 
-    //TODO: The string should contain a label for each field, followed by the data stored in that field. Each field should be on its own line
+    //The string should contain a label for each field, followed by the data stored in that field. Each field should be on its own line
+    //Makes sure output is formatted correctly
     @Test //5Part5
     public void testToStringContainsCorrectLabelsAndData() {
     Job job7 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
@@ -70,12 +71,11 @@ public class JobTest {
     String testString =  "\nID: " + job7.getId() + "\n" + "Name: " + "Product tester" + "\n" +
             "Employer: " + "ACME" + "\n" + "Location: " + "Desert" + "\n" +
             "Position Type: " + "Quality control" + "\n" + "Core Competency: " + "Persistence" + "\n";
-
     assertEquals(testString, job7.toString());
     }
 
-    //TODO: If a field is empty, the method should add, “Data not available” after the label
-    //Testing each field being empty
+    //If a field is empty, the method should add, “Data not available” after the label
+    //Testing each field being empty for the test data
     @Test //6Part5
     public void testToStringHandlesEmptyField() {
     Job job8 = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
